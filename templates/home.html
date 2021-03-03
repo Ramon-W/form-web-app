@@ -4,14 +4,12 @@
     <title>Password Generator</title>
   </head>
   <body>
-    <form>
-      What is your first, middle, or last name?<br>
-      <input type="text" name="name"
-      <br><br>
-    </form>
-    <form action='/response'>
-      <br><br>
-      <input type="submit">
+    <form action="/response">
+      <label for="name">What is your first, middle, or last name?</label><br>
+      <input type="text" id="name"><br>
+      <label for="bday">What is the year you were born?</label><br>
+      <input type="text" id="bday"><br><br>
+      <input type="submit" value="Submit">
     </form>
   </body>
 </html>
