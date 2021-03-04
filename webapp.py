@@ -19,10 +19,9 @@ def render_response():
     #The information in args is visible in the url for the page being requested. ex. .../response?color=blue
     if length < 6:
         reply = "Your password must be longer than 5 characters."
-    elif amount == 0;
+    if amount == 0;
         replyTwo = "You must generate at least 1 password."
-    reply = "My favorite color is pink."
-    return render_template('response.html', response = reply)
+    return render_template('response.html', response = reply, responseTwo = replyTwo)
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
