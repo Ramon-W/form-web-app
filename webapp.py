@@ -14,9 +14,16 @@ def render_response():
     pet = request.args['pet']
     symbol = request.args['symbol'] 
     number = request.args['number'] 
-    reply = "Your password must be longer than 5 characters."
-    replyTwo = "You must generate at least 1 password."
-    return render_template('response.html', response = reply, responseTwo = replyTwo)
+    if int('length') < 6:
+        reply = "Your password must be longer than 5 characters."
+    else:
+        reply = " "
+    if int('amount') <= 0:
+        replyTwo = "You must generate at least 1 password."
+    else:
+        replyTwo = " "
+    responseThree = "Hi"
+    return render_template('response.html', response = reply, responseTwo = replyTwo, responseThree = replyThree)
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)
