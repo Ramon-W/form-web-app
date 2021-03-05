@@ -15,9 +15,7 @@ def render_response():
     symbol = request.args['symbol'] 
     number = request.args['number'] 
     reply = "Your password must be longer than 5 characters."
-    reply = " "
     replyTwo = "You must generate at least 1 password."
-    replyTwo = " "
     reply = "Hi"
     replyTwo = "Hi"
     replyThree = "Hi"
