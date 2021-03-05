@@ -31,9 +31,9 @@ def render_response():
     for x in range(1, int(amount)):
         for y in range(1, int(length)):
             if symbol == "no" and number == "no":
-                replyTwo = replyTwo + random.choice(string.ascii_letters + string.digits + string.punctuation)
+                replyTwo = replyTwo + random.choice( + string.digits + string.punctuation)
             elif symbol == "no":
-                replyTwo = replyTwo + random.choice(string.ascii_letters + string.punctuation)
+                replyTwo = replyTwo + random.choice(string.punctuation)
             elif number == "no":
                 replyTwo = replyTwo + random.choice(string.ascii_digits)
         replyTwo = replyTwo + "/n"
