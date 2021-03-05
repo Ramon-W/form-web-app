@@ -22,6 +22,8 @@ def render_response():
         replyTwo = "You must generate at least 1 password."
     else:
         replyTwo = " "
+    reply = "Hi"
+    replyTwo = "Hi"
     replyThree = "Hi"
     return render_template('response.html', response = reply, responseTwo = replyTwo, responseThree = replyThree)
     
