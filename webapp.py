@@ -14,17 +14,17 @@ def render_response():
     pet = request.args['pet']
     symbol = request.args['symbol'] 
     number = request.args['number'] 
-    if int('length') <= 5:
+    if int(length) <= 5:
         reply = "Your password must have more than 5 characters."
-    elif int('amount') <= 0:
+    elif int(amount) <= 0:
         reply = "Generate at least 1 password."
     else:
         reply = "Passwords:"
     replyTwo = "Hi"
     keyWord = color
     keyWordTwo = pet
-    for x in range(1, int('amount')):
-        if len('keyWord') + len('keyWordTwo') <= int('length'):
+    for x in range(1, int(amount)):
+        if len(keyWord) + len(keyWordTwo) <= int(length):
             keyWord = keyWord[0]
             keyWordTwo = keyWordTwo[0]
         replyTwo = keyWord + keyWordTwo
