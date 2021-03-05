@@ -36,6 +36,7 @@ def render_response():
                 replyTwo = replyTwo + random.choice(string.punctuation)
             elif number != "yes":
                 replyTwo = replyTwo + random.choice(string.ascii_digits)
+            replyTwo = replyTwo + " - "
     return render_template('response.html', response = reply, responseTwo = replyTwo)
     
 if __name__=="__main__":
