@@ -1,3 +1,5 @@
+import random
+import string
 from flask import Flask, url_for, render_template, request
 
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
@@ -20,15 +22,15 @@ def render_response():
         reply = "Generate at least 1 password."
     else:
         reply = "Passwords:"
-    replyTwo = "Hi"
+    replyTwo = None
     keyWord = color
     keyWordTwo = pet
+    if len(keyWord) + len(keyWordTwo) <= int(length):
+        keyWord = keyWord[0]
+        keyWordTwo = keyWordTwo[0]
     for x in range(1, int(amount)):
-        if len(keyWord) + len(keyWordTwo) <= int(length):
-            keyWord = keyWord[0]
-            keyWordTwo = keyWordTwo[0]
-        replyTwo = keyWord + keyWordTwo
-            
+        replyTwo = replyTwo + ''.join([random.choice(string.ascii_letters + string.digits + string.punctuation ) for n in range(length)]) + ", "
+
     return render_template('response.html', response = reply, responseTwo = replyTwo)
     
 if __name__=="__main__":
