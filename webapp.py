@@ -29,13 +29,12 @@ def render_response():
         keyWord = keyWord[0]
         keyWordTwo = keyWordTwo[0]
     for x in range(1, int(amount)):
-        count = 0
         for y in range(1, int(length)):
-            if symbol = "yes" and number = "yes":
+            if symbol == "yes" and number == "yes":
                 replyTwo = replyTwo + random.choice(string.ascii_letters + string.digits + string.punctuation)
-            elif symbol = "yes":
+            elif symbol == "yes":
                 replyTwo = replyTwo + random.choice(string.ascii_letters + string.punctuation)
-            elif number = "yes":
+            elif number == "yes":
                 replyTwo = replyTwo + random.choice(string.ascii_digits)
         replyTwo = replyTwo + "/n"
     return render_template('response.html', response = reply, responseTwo = replyTwo)
