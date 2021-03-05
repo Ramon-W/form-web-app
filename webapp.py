@@ -14,14 +14,10 @@ def render_response():
     pet = request.args['pet']
     symbol = request.args['symbol'] 
     number = request.args['number'] 
-    if int('length') < 6:
-        reply = "Your password must be longer than 5 characters."
-    else:
-        reply = " "
-    if int('amount') <= 0:
-        replyTwo = "You must generate at least 1 password."
-    else:
-        replyTwo = " "
+    reply = "Your password must be longer than 5 characters."
+    reply = " "
+    replyTwo = "You must generate at least 1 password."
+    replyTwo = " "
     reply = "Hi"
     replyTwo = "Hi"
     replyThree = "Hi"
