@@ -16,12 +16,13 @@ def render_response():
     pet = request.args['pet']
     symbol = request.args['symbol'] 
     number = request.args['number'] 
-    if int(length) <= 5:
-        reply = "Your password must have more than 5 characters."
-    elif int(amount) <= 0:
-        reply = "Generate at least 1 password."
-    else:
-        reply = "Passwords:"
+    #if int(length) <= 5:
+    #    reply = "Your password must have more than 5 characters."
+    #elif int(amount) <= 0:
+    #    reply = "Generate at least 1 password."
+    #else:
+    #    reply = "Passwords:"
+    reply = symbol
     replyTwo = ""
     keyWord = color
     keyWordTwo = pet
