@@ -22,15 +22,16 @@ def render_response():
         reply = "Generate at least 1 password."
     else:
         reply = "Passwords:"
-    replyTwo = "Hi"
+    replyTwo = ""
     keyWord = color
     keyWordTwo = pet
     if len(keyWord) + len(keyWordTwo) <= int(length):
         keyWord = keyWord[0]
         keyWordTwo = keyWordTwo[0]
     for x in range(1, int(amount)):
-        replyTwo = random.choice(string.ascii_letters + string.digits + string.punctuation)
-
+        for y in range(1, int(length)):
+            replyTwo = replyTwo + random.choice(string.ascii_letters + string.digits + string.punctuation)
+        replyTwo = replyTwo + ", "
     return render_template('response.html', response = reply, responseTwo = replyTwo)
     
 if __name__=="__main__":
