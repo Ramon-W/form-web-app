@@ -29,7 +29,7 @@ def render_response():
         keyWord = keyWord[0]
         keyWordTwo = keyWordTwo[0]
     for x in range(1, int(amount)):
-        count = 0;
+        count = 0
         for y in range(1, int(length)):
             if symbol = "yes" and number = "yes":
                 replyTwo = replyTwo + random.choice(string.ascii_letters + string.digits + string.punctuation)
