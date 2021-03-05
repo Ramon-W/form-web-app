@@ -31,11 +31,11 @@ def render_response():
         keyWordTwo = keyWordTwo[0]
     for x in range(1, int(amount)):
         for y in range(1, int(length)):
-            if symbol != "yes" and number != "yes":
+            if symbol == "true" and number == "true":
                 replyTwo = replyTwo + random.choice(string.digits + string.punctuation)
-            elif symbol != "yes":
+            elif symbol == "true":
                 replyTwo = replyTwo + random.choice(string.punctuation)
-            elif number != "yes":
+            elif number == "true":
                 replyTwo = replyTwo + random.choice(string.ascii_digits)
             replyTwo = replyTwo + " - "
     return render_template('response.html', response = reply, responseTwo = replyTwo)
