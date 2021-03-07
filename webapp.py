@@ -28,7 +28,7 @@ def render_response():
     if len(keyWord) + len(keyWordTwo) <= int(length):
         keyWord = keyWord[0]
         keyWordTwo = keyWordTwo[0]
-    if replyTwo != ""
+    if replyTwo != "":
         for x in range(1, int(amount)):
             for y in range(1, int(length)):
                 if symbol == "true" and number == "true":
