@@ -28,14 +28,14 @@ def render_response():
     if reply == "Passwords:":
         for x in range(1, int(amount)):
             while len(keyWord) + len(keyWordTwo) >= int(length):
-                rand = random.ranrange(0, 2)
+                rand = random.randrange(0, 2)
                 if rand == 0:
-                    rand = random.ranrange(0, len(keyWord))
+                    rand = random.randrange(0, len(keyWord))
                     keyWord = keyWord[0:rand]
                 else:
-                    rand = random.ranrange(0, len(keyWordTwo))
+                    rand = random.randrange(0, len(keyWordTwo))
                     keyWordTwo = keyWordTwo[0:rand]
-            randB = random.ranrange(0, 2)
+            randB = random.randrange(0, 2)
             if randB == 0:
                 replyTwo = keyWord + keyWordTwo
             else:
