@@ -37,9 +37,9 @@ def render_response():
                     keyWordTwo = keyWordTwo[0:rand]
             randB = random.randrange(0, 2)
             if randB == 0:
-                replyTwo = keyWord + keyWordTwo
+                replyTwo = replyTwo + keyWord + keyWordTwo
             else:
-                replyTwo = keyWordTwo + keyWord
+                replyTwo = replyTwo + keyWordTwo + keyWord
             for y in range(1, int(length) - len(keyWord) - len(keyWordTwo)):
                 if symbol == "true" and number == "true":
                     replyTwo = replyTwo + random.choice(string.digits + string.punctuation)
