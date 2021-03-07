@@ -40,7 +40,7 @@ def render_response():
                 replyTwo = keyWord + keyWordTwo
             else:
                 replyTwo = keyWordTwo + keyWord
-            for y in range(1, int(length) - len(keyWord) - len(keyWordTwo):
+            for y in range(1, int(length) - len(keyWord) - len(keyWordTwo)):
                 if symbol == "true" and number == "true":
                     replyTwo = replyTwo + random.choice(string.digits + string.punctuation)
                 elif symbol == "true":
