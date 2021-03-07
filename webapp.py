@@ -28,15 +28,16 @@ def render_response():
     if len(keyWord) + len(keyWordTwo) <= int(length):
         keyWord = keyWord[0]
         keyWordTwo = keyWordTwo[0]
-    for x in range(1, int(amount)):
-        for y in range(1, int(length)):
-            if symbol == "true" and number == "true":
-                replyTwo = replyTwo + random.choice(string.digits + string.punctuation)
-            elif symbol == "true":
-                replyTwo = replyTwo + random.choice(string.punctuation)
-            elif number == "true":
-                replyTwo = replyTwo + random.choice(string.ascii_digits)
-        replyTwo = replyTwo + " -------- "
+    if replyTwo != ""
+        for x in range(1, int(amount)):
+            for y in range(1, int(length)):
+                if symbol == "true" and number == "true":
+                    replyTwo = replyTwo + random.choice(string.digits + string.punctuation)
+                elif symbol == "true":
+                   replyTwo = replyTwo + random.choice(string.punctuation)
+                elif number == "true":
+                    replyTwo = replyTwo + random.choice(string.ascii_digits)
+            replyTwo = replyTwo + " -------- "
     return render_template('response.html', response = reply, responseTwo = replyTwo)
     
 if __name__=="__main__":
