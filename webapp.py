@@ -28,7 +28,7 @@ def render_response():
     if len(keyWord) + len(keyWordTwo) <= int(length):
         keyWord = keyWord[0]
         keyWordTwo = keyWordTwo[0]
-    if replyTwo != "":
+    if reply == "Passwords":
         for x in range(1, int(amount)):
             for y in range(1, int(length)):
                 if symbol == "true" and number == "true":
@@ -38,6 +38,8 @@ def render_response():
                 elif number == "true":
                     replyTwo = replyTwo + random.choice(string.ascii_digits)
             replyTwo = replyTwo + " -------- "
+    else:
+        replyTwo = ""
     return render_template('response.html', response = reply, responseTwo = replyTwo)
     
 if __name__=="__main__":
