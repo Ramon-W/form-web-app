@@ -27,6 +27,8 @@ def render_response():
     keyWordTwo = pet
     if reply == "Passwords:":
         for x in range(1, int(amount)):
+            keyWord = color
+            keyWordTwo = pet
             while len(keyWord) + len(keyWordTwo) >= int(length):
                 rand = random.randrange(0, 2)
                 if rand == 0:
