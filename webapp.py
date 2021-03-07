@@ -25,19 +25,35 @@ def render_response():
     replyTwo = ""
     keyWord = color
     keyWordTwo = pet
-    if len(keyWord) + len(keyWordTwo) <= int(length):
-        keyWord = keyWord[0]
-        keyWordTwo = keyWordTwo[0]
+    while len(keyWord) + len(keyWordTwo) <= int(length):
+        rand = random.ranrange(0,2)
+        if(rand == 0):
+            keyWord = keyWord[0]
+        else
+            keyWordTwo = keyWordTwo[0]
     if reply == "Passwords:":
         for x in range(1, int(amount)):
-            for y in range(1, int(length)):
+            while len(keyWord) + len(keyWordTwo) <= int(length):
+                rand = random.ranrange(0, 2)
+                if rand == 0:
+                    rand = random.ranrange(0, len(keyWord))
+                    keyWord = keyWord[0]
+                else:
+                    rand = random.ranrange(0, len(keyWordTwo))
+                    keyWordTwo = keyWordTwo[0]
+            rand = random.ranrange(0, 2)
+            if rand == 0:
+                replyTwo = keyWord + keyWordTwo
+            else:
+                replyTwo = keyWordTwo + keyWord
+            for y in range(1, int(length) + len(keyWord) + len(keyWordTwo):
                 if symbol == "true" and number == "true":
                     replyTwo = replyTwo + random.choice(string.digits + string.punctuation)
                 elif symbol == "true":
                    replyTwo = replyTwo + random.choice(string.punctuation)
                 elif number == "true":
-                    replyTwo = replyTwo + random.choice(string.ascii_digits)
-            replyTwo = replyTwo + " -------- "
+                    replyTwo = replyTwo + random.choice(string.digits)
+            replyTwo = replyTwo + " _______ "
     else:
         replyTwo = ""
     return render_template('response.html', response = reply, responseTwo = replyTwo)
