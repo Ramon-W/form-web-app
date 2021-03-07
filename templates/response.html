@@ -4,6 +4,29 @@
     <title>Password Generator</title>
   </head>
   <body>
+    <form action="/response">
+      <label for="length">How long do you want your password (more than 16 is recommended)?</label><br>
+      <input type="text" id="length" name="length"><br><br>
+      
+      <label for="amount">How many passwords do you want generated?</label><br>
+      <input type="text" id="amount" name="amount"><br><br>
+      
+      <label for="color">What is your favorite color?</label><br>
+      <input type="text" id="color" name="color"><br><br>
+      
+      <label for="pet">What is the name of a pet you owned?</label><br>
+      <input type="text" id="pet" name="pet"><br><br>
+      
+      <label for="symbol">Include symbols?</label>
+      <input type="checkbox" name="symbol" value="true" />
+      <input type="hidden" name="symbol" value="false" /><br><br>
+      
+      <label for="number">Include numbers?</label>
+      <input type="checkbox" name="number" value="true" />
+      <input type="hidden" name="number" value="false" /><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
     <p>{{ response }}</p>
     <p>{{ responseTwo }}</p>
   </body>
