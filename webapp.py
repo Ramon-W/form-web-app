@@ -17,7 +17,7 @@ def render_response():
     symbol = request.args['symbol'] 
     number = request.args['number'] 
     replyTwo = ""
-    if length != "" and amount != "":
+    if length != "" and amount != "" and length.isnumeric() and amount.isnumeric():
         if int(length) <= 5:
             reply = "Your password must have more than 5 characters."
         elif int(amount) <= 0:
