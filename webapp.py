@@ -27,7 +27,7 @@ def render_response():
         keyWord = color
         keyWordTwo = pet
         if reply == "Passwords:":
-            for x in range(1, int(amount)):
+            for x in range(0, int(amount)):
                 keyWord = color
                 keyWordTwo = pet
                 while len(keyWord) + len(keyWordTwo) >= int(length):
