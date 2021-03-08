@@ -8,29 +8,31 @@
     <title>Password Generator</title>
   </head>
   <body>
-    <form action="/response">
-      <label for="length">How long do you want your password (more than 16 is recommended)?</label><br>
-      <input type="text" id="length" name="length"><br>
+    <div>
+      <form action="/response">
+        <label for="length">How long do you want your password (more than 16 is recommended)?</label><br>
+        <input type="text" id="length" name="length"><br>
       
-      <label for="amount">How many passwords do you want generated?</label><br>
-      <input type="text" id="amount" name="amount"><br>
+        <label for="amount">How many passwords do you want generated?</label><br>
+        <input type="text" id="amount" name="amount"><br>
       
-      <label for="color">What is the name of a pet you owned (optional or any keyword)?</label><br>
-      <input type="text" id="color" name="color"><br>
+        <label for="color">What is the name of a pet you owned (optional or any keyword)?</label><br>
+        <input type="text" id="color" name="color"><br>
       
-      <label for="pet">What is the month you were born (optional or any keyword)?</label><br>
-      <input type="text" id="pet" name="pet"><br>
+        <label for="pet">What is the month you were born (optional or any keyword)?</label><br>
+        <input type="text" id="pet" name="pet"><br>
       
-      <label for="symbol">Include symbols?</label>
-      <input type="checkbox" name="symbol" checked value="true" />
-      <input type="hidden" name="symbol" value="false" /><br>
+        <label for="symbol">Include symbols?</label>
+        <input type="checkbox" name="symbol" checked value="true" />
+        <input type="hidden" name="symbol" value="false" /><br>
       
-      <label for="number">Include numbers?</label>
-      <input type="checkbox" name="number" checked value="true" />
-      <input type="hidden" name="number" value="false" /><br>
-      
-      <input type="submit" value="Submit">
-      <input type="reset">
-    </form>
+        <label for="number">Include numbers?</label>
+        <input type="checkbox" name="number" checked value="true" />
+        <input type="hidden" name="number" value="false" /><br>
+        
+        <input type="submit" value="Submit">
+        <input type="reset">
+      </form>
+    </div>
   </body>
 </html>
