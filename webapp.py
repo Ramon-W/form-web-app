@@ -50,6 +50,8 @@ def render_response():
                         replyTwo = replyTwo + random.choice(string.punctuation)
                     elif number == "true":
                         replyTwo = replyTwo + random.choice(string.digits)
+                    else:
+                        replyTwo = replyTwo + "█"
                 replyTwo = replyTwo + " _______ "
         else:
             replyTwo = ""
