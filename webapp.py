@@ -17,7 +17,7 @@ def render_response():
     symbol = request.args['symbol'] 
     number = request.args['number'] 
     replyTwo = ""
-    if length != "" and amount != "" and length.isnumeric() and amount.isnumeric() and amount < 101 and length < 51:
+    if length != "" and amount != "" and length.isnumeric() and amount.isnumeric() and int(amount) < 101 and int(length) < 51:
         if int(length) <= 5:
             reply = "Your password must have more than 5 characters."
         elif int(amount) <= 0:
@@ -55,9 +55,9 @@ def render_response():
             replyTwo = ""
     elif (length.isnumeric() == False or length == "") and (amount.isnumeric() == False or amount == ""):
         reply = "Please specify a length between 5 and 50 and amount between 1 and 100."
-    elif length == "" or length.isnumeric() == False or length > 50:
+    elif length == "" or length.isnumeric() == False or int(length) > 50:
         reply = "Please specify a length between 6 and 50."
-    elif amount == "" or amount.isnumeric() == False or amount > 100:
+    elif amount == "" or amount.isnumeric() == False or int(amount) > 100:
         reply = "Please specify an amount between 1 and 100."
     else:
         reply = "There was an error processing your request."
