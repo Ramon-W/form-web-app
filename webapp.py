@@ -33,10 +33,10 @@ def render_response():
                 while (len(keyWord) + len(keyWordTwo)) >= (int(length) - 2):
                     rand = random.randrange(0, 2)
                     if rand == 0:
-                        rand = random.randrange(1, len(keyWord))
+                        rand = random.randrange(2, (len(keyWord)-1))
                         keyWord = keyWord[0:rand]
                     else:
-                        rand = random.randrange(1, len(keyWordTwo))
+                        rand = random.randrange(2, (len(keyWordTwo)-1))
                         keyWordTwo = keyWordTwo[0:rand]
                 randB = random.randrange(0, 2)
                 if randB == 0:
