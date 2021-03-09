@@ -32,10 +32,10 @@ def render_response():
                 keyWordTwo = pet
                 while (len(keyWord) + len(keyWordTwo)) >= (int(length) - 2):
                     rand = random.randrange(0, 2)
-                    if rand == 0:
+                    if rand == 0 and len(keyWord) >= 2:
                         rand = random.randrange(1, len(keyWord))
                         keyWord = keyWord[0:rand]
-                    else:
+                    elif len(keyWordTwo) >= 2:
                         rand = random.randrange(1, len(keyWordTwo))
                         keyWordTwo = keyWordTwo[0:rand]
                 randB = random.randrange(0, 2)
