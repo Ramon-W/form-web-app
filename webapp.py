@@ -30,7 +30,7 @@ def render_response():
             for x in range(0, int(amount)):
                 keyWord = color
                 keyWordTwo = pet
-                while len(keyWord) + len(keyWordTwo) >= int(length) - 2:
+                while (len(keyWord) + len(keyWordTwo)) >= (int(length) - 2):
                     rand = random.randrange(0, 2)
                     if rand == 0:
                         rand = random.randrange(0, len(keyWord))
