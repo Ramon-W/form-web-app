@@ -33,17 +33,17 @@ def render_response():
                 while (len(keyWord) + len(keyWordTwo)) >= (int(length) - 2):
                     rand = random.randrange(0, 2)
                     if rand == 0:
-                        rand = random.randrange(2, (len(keyWord)-1))
+                        rand = random.randrange(1, len(keyWord))
                         keyWord = keyWord[0:rand]
                     else:
-                        rand = random.randrange(2, (len(keyWordTwo)-1))
+                        rand = random.randrange(1, len(keyWordTwo))
                         keyWordTwo = keyWordTwo[0:rand]
                 randB = random.randrange(0, 2)
                 if randB == 0:
                     replyTwo = replyTwo + keyWord + keyWordTwo
                 else:
                     replyTwo = replyTwo + keyWordTwo + keyWord
-                for y in range(0, int(length) - len(keyWord) - len(keyWordTwo)):
+                for y in range(0, (int(length) - len(keyWord) - len(keyWordTwo))):
                     if symbol == "true" and number == "true":
                         replyTwo = replyTwo + random.choice(string.digits + string.punctuation)
                     elif symbol == "true":
