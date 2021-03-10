@@ -52,7 +52,8 @@ def render_response():
                         replyTwo = replyTwo + random.choice(string.digits)
                     else:
                         replyTwo = replyTwo + "█"
-                replyTwo = replyTwo + " _______ "
+                if x != int(amount):
+                    replyTwo = replyTwo + " _______ "
         else:
             replyTwo = ""
     elif (length.isnumeric() == False or length == "") and (amount.isnumeric() == False or amount == ""):
