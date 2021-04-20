@@ -11,7 +11,7 @@ if __name__=="__main__":
 def render_main():
     return render_template('home.html')
 
-@app.route('/response', methods=['GET']['POST'])
+@app.route('/response', methods=['GET'], ['POST'])
 def render_response():
     if request.method == 'POST':
         length = request.form['length'] 
